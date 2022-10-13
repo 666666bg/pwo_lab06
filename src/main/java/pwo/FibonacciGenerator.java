@@ -2,7 +2,7 @@ package pwo;
 
 import java.math.BigDecimal;
 
-public class FibonacciGenerator {
+public class FibonacciGenerator implements Iterator {
 
     private int lastIndex = 0;
     private BigDecimal current = new BigDecimal(0);
@@ -31,6 +31,7 @@ public class FibonacciGenerator {
         return current;
     }
 
+    @Override
     public BigDecimal getTerm(int i) {
         if (i < 0) {
             throw new IllegalArgumentException();
