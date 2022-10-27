@@ -1,5 +1,12 @@
 package pwo.app;
 
+/**
+ * Ta klasa dpowiada za uruchamianie określonej sekwencji zależnie
+ * od liczby podanych argumentów w linii poleceń.
+ *
+ * @author wladyslaw
+ * @version 1.0.0
+ */
 public class Sequence {
 
     public static void main(String[] args) {

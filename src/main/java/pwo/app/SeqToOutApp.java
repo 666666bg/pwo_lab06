@@ -2,13 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+
+
 package pwo.app;
 
 import pwo.utils.SequenceTools;
 
 /**
+ * Klasa rozbudowująca działanie funkcji {@link pwo.app.SeqToFileApp}. Klasa dodaje
+ * możliwość wypisania wyników na ekran konsoli.
  *
- * @author vladi
+ * @author wladyslaw
+ * @version 1.0.0
  */
 public class SeqToOutApp extends SeqToFileApp {
 
@@ -30,6 +35,12 @@ public class SeqToOutApp extends SeqToFileApp {
 
         return true;
     }
+
+    /**
+     * Tutaj odbyła się wypisywanie wyrazy ciągu na ekran konsoli.
+     *
+     * @param args Argumenty linii poleceń
+     */
 
     @Override
     public void run(String[] args) {
