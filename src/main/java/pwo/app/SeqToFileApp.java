@@ -5,6 +5,13 @@ import pwo.utils.SequenceTools;
 import java.nio.file.Paths;
 import java.nio.file.InvalidPathException;
 
+/**
+ * Tutaj odbyła się zapis jednego z wybranych ciągów do pliku
+ *
+ * @author wladyslaw
+ * @version 1.0.0
+ */
+
 class SeqToFileApp {
 
     protected SeqType seqType = null;
@@ -31,11 +38,15 @@ class SeqToFileApp {
         return seqType != null && from >= 0 && to >= 0;
     }
 
-    protected boolean wirteSeq() {
+    protected boolean writeSeq() {
         return SequenceTools.writeToFile(seqType.getGenerator(),
                 from, to, fileName);
     }
-
+    /**
+     * Funkcja odpowiada za zapis do pliku.
+     *
+     * @param args Argumenty wiersza poleceń
+     */
     public void run(String[] args) {
         System.out.println("Sequence to file CLI app");
 
@@ -45,7 +56,7 @@ class SeqToFileApp {
             return;
         }
 
-        if (!wirteSeq()) {
+        if (!writeSeq()) {
             System.out.println("!Write to the file: "
                     + fileName + " FAILED");
             return;
